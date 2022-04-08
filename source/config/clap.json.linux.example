@@ -8,5 +8,6 @@
     "CLAP_ENERGY_THRESHOLD"      : 0.3,
     "MAX_HISTORY_LENGTH"         : 10
     "TIMESTAMP"                  : true
-}   "AUDIOCMD"                   : "echo 'sticker activated' > /tmp/ttv && festival --tts /tmp/ttv && rm /tmp/ttv"
+    "AUDIOCMD"                   : "echo 'sticker activated' > /tmp/ttv && festival --tts /tmp/ttv && rm /tmp/ttv"
+}
 

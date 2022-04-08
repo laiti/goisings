@@ -8,4 +8,5 @@
     "CLAP_ENERGY_THRESHOLD"      : 1.0,
     "MAX_HISTORY_LENGTH"         : 10
     "TIMESTAMP"                  : true
+    "AUDIOCMD"                   : "/usr/bin/say -r 60 -v Satu 'sticker aktivoitu'"
 }
