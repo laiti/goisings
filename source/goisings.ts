@@ -2,8 +2,8 @@ import moment from 'moment';
 import TelegramBot from 'node-telegram-bot-api';
 import ClapDetector from 'clap-detector';
 
-import clapConfig from '../config/clap.json';
-import telegramConfig from '../config/telegram.json';
+import clapConfig from './config/clap.json';
+import telegramConfig from './config/telegram.json';
 
 const clap = new ClapDetector(clapConfig);
 
