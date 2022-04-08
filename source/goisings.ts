@@ -17,12 +17,11 @@ function ts() {
 
 const bot = new TelegramBot(telegramConfig.botToken, { polling: false });
 
-const disposableTwoClapsListener = clap.addClapsListener(
+clap.addClapsListener(
   (claps) => {
     console.log(`${ts()} heard 2 claps`, claps);
     bot.sendMessage(telegramConfig.chatId, 'sticker');
-      clapConfig.AUDIOCMD ? exec(clapConfig.AUDIOCMD);
-      }
+    clapConfig.AUDIOCMD ? exec(clapConfig.AUDIOCMD) : true;
   },
   { number: clapConfig.CLAPS, delay: clapConfig.TIMEOUT },
 );
