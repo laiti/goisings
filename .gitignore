@@ -1,3 +1,3 @@
 node_modules
-config/clap.json
-config/telegram.json
+config/*.json
+compiled/*
