@@ -7,7 +7,6 @@
     "build": "tsc",
     "eslint": "./node_modules/eslint/bin/eslint.js source --ext .ts,.js",
     "start": "node compiled/goisings.js",
-    "test": "NODE_ENV=localdev jest test/unit --coverage",
     "watch": "tsc -w"
   },
   "dependencies": {
@@ -34,7 +33,6 @@
   "homepage": "https://github.com/laiti/goisings#readme",
   "devDependencies": {
     "@types/config": "^0.0.41",
-    "@types/jest": "^27.4.1",
     "@types/moment": "^2.13.0",
     "@types/node": "^17.0.23",
     "@types/node-telegram-bot-api": "^0.56.2",
@@ -43,9 +41,6 @@
     "eslint": "^8.12.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "husky": "^7.0.4",
-    "jest": "^27.5.1",
-    "ts-jest": "^27.1.4",
     "typescript": "^4.6.3"
   }
 }
