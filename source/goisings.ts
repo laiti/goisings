@@ -20,7 +20,7 @@ const bot = new TelegramBot(telegramConfig.botToken, { polling: false });
 clap.addClapsListener(
   (claps) => {
     console.log(`${ts()} heard 2 claps`, claps);
-    bot.sendMessage(telegramConfig.chatId, 'sticker');
+    bot.sendSticker(telegramConfig.chatId, telegramConfig.stickerId);
     clapConfig.AUDIOCMD ? exec(clapConfig.AUDIOCMD) : true;
   },
   { number: clapConfig.CLAPS, delay: clapConfig.TIMEOUT },
