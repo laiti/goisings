@@ -1,0 +1,34 @@
+{
+  "name": "goisings",
+  "version": "1.0.0",
+  "description": "Posts sticker to Telegram if hears two claps",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "eslint": "./node_modules/eslint/bin/eslint.js source --ext .ts,.js",
+    "test": "NODE_ENV=localdev jest test/unit --coverage",
+    "watch": "tsc -w"
+  },
+  "dependencies": {
+    "clap-detector": "^0.5.3",
+    "config": "^3.3.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laiti/goisings.git"
+  },
+  "keywords": [
+    "audio",
+    "clap",
+    "remote",
+    "telegram"
+  ],
+  "author": "Antti Laiti <antti@laiti.fi>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laiti/goisings/issues"
+  },
+  "homepage": "https://github.com/laiti/goisings#readme",
+  "devDependencies": {
+  }
+}
