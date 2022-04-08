@@ -1,4 +1,5 @@
 import moment from 'moment';
+import { exec } from 'child_process';
 import TelegramBot from 'node-telegram-bot-api';
 import ClapDetector from 'clap-detector';
 
@@ -20,6 +21,8 @@ const disposableTwoClapsListener = clap.addClapsListener(
   (claps) => {
     console.log(`${ts()} heard 2 claps`, claps);
     bot.sendMessage(telegramConfig.chatId, 'sticker');
+      clapConfig.AUDIOCMD ? exec(clapConfig.AUDIOCMD);
+      }
   },
   { number: clapConfig.CLAPS, delay: clapConfig.TIMEOUT },
 );

@@ -6,6 +6,7 @@
   "scripts": {
     "build": "tsc",
     "eslint": "./node_modules/eslint/bin/eslint.js source --ext .ts,.js",
+    "start": "node compiled/goisings.js",
     "test": "NODE_ENV=localdev jest test/unit --coverage",
     "watch": "tsc -w"
   },
