@@ -1,4 +1,18 @@
-clapDetector = require('clap-detector');
+import ClapDetector from 'clap-detector';
+import moment from 'moment';
 
-const clapConfig = require('./config/clap.json');
-const telegramConfig = require('./config/clap.json');
+import clapConfig from '../config/clap.json';
+import telegramConfig from '../config/telegram.json';
+
+const clap = new ClapDetector(clapConfig);
+
+function ts() {
+    if (clapConfig.TIMESTAMP) {
+        return moment().format('YYYY-MM-DDTHH:mm:ss: ');
+    }
+    return '';
+}
+
+const disposableTwoClapsListener = clap.addClapsListener(claps => {
+    console.log("heard 2 claps", claps)
+  }, { number: clapConfig.CLAPS, delay: clapConfig.TIMEOUT });
